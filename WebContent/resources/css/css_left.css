@@ -1,0 +1,68 @@
+.menuu {
+	border: #8BB6EF solid 1px;
+	margin: 0px 5px 0px 5px;
+	overflow: visible;
+}
+
+.menuu ul {
+	list-style: none;
+}
+
+.menuu li {
+	text-align: left;
+	vertical-align: middle;
+	padding-right: 5px;
+	padding-left: 5px; *
+	height: 22px;
+}
+
+.menuu .title {
+	height: 25px;
+	line-height: 25px;
+	clear: both;
+	font-weight: bold;
+	background: url(../images/panel.gif) repeat-x;
+	border-bottom: #A3C0E8 solid 1px;
+	color: #000000;
+}
+
+.menuu .title .menuu_title_text {
+	float: left;
+	font-weight: 500;
+}
+
+.menuu .title .menuu_title_img {
+	float: right;
+	padding-top: 5px;
+}
+
+.menuu .option {
+	padding-left: 10px;
+	background: #f2f9fd;
+	overflow: visible;
+}
+.menuu .option a {
+	color: #000000;
+}
+
+.menuu .option a:hover {
+	text-decoration: none;
+}
+
+.menuu .option li {
+	border-bottom: #CCCCCC inset 1px;
+	height: 25px;
+	line-height: 25px;
+	vertical-align: baseline; *
+	height: 20px; *
+	padding-top: 10px;
+}
+
+.menuu .option li:hover {
+	border-bottom: #CCCCCC inset 1px;
+	background-color: #e8f3fd;
+}
+
+.menuu .option img {
+	margin-right: 10px;
+}

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="uploadFile"></constant>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.objectFactory" value="spring" />
+
+	<package name="xwl-default" namespace="/" extends="struts-default">
+		<!-- =========================== 定义全局变量============================= -->
+		<global-results>
+		    <result name="success">
+				/WEB-INF/view/common/success.jsp
+			</result>
+			<result name="failed">
+				/WEB-INF/view/common/failed.jsp
+			</result>
+			<result name="quit">
+				/index.jsp
+			</result>
+			<result name="error">
+				/resources/views/NoPower.jsp
+			</result>
+			<result name="unhandledException">/resources/views/notfound.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="unhandledException" />
+		</global-exception-mappings>
+	</package>
+	<package name="default" namespace="/" extends="xwl-default">
+		<!-- ===========================定义拦截器==================== -->
+		<interceptors>
+			<interceptor name="authority"
+				class="com.dzhf.interceptor.CheckLoginInterceptor">
+			</interceptor>
+			<interceptor-stack name="mydefault">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authority" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="mydefault" />
+		<!-- ===========================登录=============================== -->
+		<action name="Login_*" class="login" method="{1}">
+			<result>
+				/index.jsp
+			</result>
+			<result name="ok" type="redirect">
+				Notice_noticeList?p=101
+			</result>
+		</action>
+		<!-- =================通知公告====================================== -->
+		<action name="Notice_*" class="notice" method="{1}">
+			<result name="addNotice">
+				/WEB-INF/view/notice/addNotice.jsp
+			</result>
+			<result name="noticeList">
+				/WEB-INF/view/notice/noticeList.jsp
+			</result>
+			<result name="showNotice">
+				/WEB-INF/view/notice/showNotice.jsp			
+			</result>
+			<result name="updateNoticeShow">
+				/WEB-INF/view/notice/updateNoticeShow.jsp
+			</result>
+		</action>
+		<!-- =================指标设置====================================== -->
+		<action name="Tar_*" class="target" method="{1}">
+			<result name="SetTar">
+				/WEB-INF/view/target/setTarget.jsp
+			</result>
+			<result name="lookTar">
+				/WEB-INF/view/target/lookTarget.jsp
+			</result>
+			<result name="seeTar">
+				/WEB-INF/view/target/seeTarget.jsp
+			</result>
+			<result name="addtar">
+				/WEB-INF/view/target/AddTarget.jsp
+			</result>
+			<result name="btar">
+				/WEB-INF/view/target/bTarget.jsp
+			</result>
+		</action>
+		<!-- =================指标管理===================================== -->
+		<action name="Data_*" class="data" method="{1}">
+			<result name="DataList">
+				/WEB-INF/view/data/DataHistory.jsp
+			</result>
+			<result name="AddData">
+				/WEB-INF/view/data/AddData.jsp
+			</result>
+			<result name="baocun">
+				/WEB-INF/view/data/lookdata.jsp
+			</result>
+		</action>
+		<!-- =================指标审核===================================== -->
+		<action name="Review_*" class="review" method="{1}">
+			<result name="reviewlist">
+				/WEB-INF/view/review/ReviewList.jsp
+			</result>
+			<result name="reviewhistory">
+				/WEB-INF/view/review/reviewhistory.jsp
+			</result>
+		</action>
+		<!-- =================统计查询===================================== -->
+		<action name="Res_*" class="result" method="{1}">
+			<result name="result">
+				/WEB-INF/view/result/selectdata.jsp
+			</result>
+			<result name="result1">
+				/WEB-INF/view/result/selectdata1.jsp
+			</result>
+			<result name="Sum1">
+				/WEB-INF/view/result/DataSum.jsp
+			</result>
+			<result name="Sum2">
+				/WEB-INF/view/result/DataSum1.jsp
+			</result>
+			<result name="tx">
+				/WEB-INF/view/result/tx.jsp
+			</result>
+			<result name="tx2">
+				/WEB-INF/view/result/tx2.jsp
+			</result>
+		</action>
+		<!-- ==============系统管理================================ -->
+		<action name="Sym_*" method="{1}" class="sym">
+			<result name="deptManage">
+				/WEB-INF/view/sym/deptManage/deptManage.jsp
+			</result>
+			<result name="userManage">
+				/WEB-INF/view/sym/userManage/userManageView.jsp
+			</result>
+			<result name="roleManage">
+				/WEB-INF/view/sym/roleManage/roleManage.jsp
+			</result>
+			<result name="proList">
+				/WEB-INF/view/sym/proManage/proList.jsp
+			</result>
+			<result name="uPro">
+				/WEB-INF/view/sym/proManage/uPro.jsp
+			</result>
+			<result name="addPro">
+				/WEB-INF/view/sym/proManage/addPro.jsp
+			</result>
+			<result name="environmentStatus">
+				/WEB-INF/view/sym/symManage/environmentStatus.jsp
+			</result>
+			<result name="backfilelist">
+				/WEB-INF/view/sym/symManage/backList.jsp
+			</result>
+			<result name="personalMessage">
+				/WEB-INF/view/sym/personalMessage/personalMessage.jsp
+			</result>
+		</action>
+		<!-- =================导出======================= -->
+		<action name="Export_*" method="{1}" class="export">
+			<result name="exDayFee"></result>
+			<result name="exMonFee"></result>
+		</action>
+	</package>
+
+</struts>
+	

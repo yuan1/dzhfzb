@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+.mybutton {
+	width: 60px;
+	margin-top: 2px;
+	height: 25px;
+}
+
+.mybutton:hover {
+	cursor: pointer;
+}
+
+/* CSS Document */ /*----------common------------*/
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+html,body,form,div,ul,fieldset,li,table,tr,td,span,em,lable,span,input {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: #FFFFFF;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+a {
+	text-decoration: none;
+	color: #006699;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.input_text {
+	border: #AECAF0 solid 1px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	/*padding-left:5px;
+	padding-right:5px;*/
+	font-size: 13px;
+}
+
+.input_textarea {
+	border: #AECAF0 solid 1px;
+	vertical-align: middle;
+	padding: 0px;
+	margin: 0px;
+	font-size: 13px;
+}
+
+.input_select {
+	border: #AECAF0 solid 1px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 13px;
+}
+
+.mydateformat {
+	border: #AECAF0 solid 1px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 13px;
+}
+
+.necessary {
+	color: red;;
+}
+
+#tt a {
+	color: black;
+}
+
+/* ======================新增=====================================
+2015.04.06
+*/
+.easyui-validatebox {
+	border: #AECAF0 solid 1px;
+	height: 20px;
+}
+
+.light {
+	width: 28px;
+	height: 28px;
+}
+
+.ac_results {
+	BORDER-RIGHT: #7f9db9 1px solid;
+	BORDER-TOP: #7f9db9 1px solid;
+	DISPLAY: none;
+	Z-INDEX: 10000;
+	BACKGROUND: #fff;
+	BORDER-LEFT: #7f9db9 1px solid;
+	BORDER-BOTTOM: #7f9db9 1px solid;
+	POSITION: absolute
+}
+
+.ac_results UL {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-TOP: 0px;
+	LIST-STYLE-TYPE: none
+}
+
+.ac_results LI A {
+	PADDING-RIGHT: 3px;
+	DISPLAY: block;
+	PADDING-LEFT: 3px;
+	PADDING-BOTTOM: 1px;
+	COLOR: #05a;
+	PADDING-TOP: 1px;
+	WHITE-SPACE: nowrap;
+	TEXT-DECORATION: none
+}
+
+.ac_results LI {
+	BORDER-RIGHT: #fff 1px solid;
+	BORDER-TOP: #fff 1px solid;
+	BORDER-LEFT: #fff 1px solid;
+	BORDER-BOTTOM: #fff 1px solid
+}
+
+.ac_over {
+	BACKGROUND: #c8e3fc
+}
+
+.ac_results LI A:hover {
+	BACKGROUND: #c8e3fc
+}
+
+.ac_results LI A SPAN {
+	FLOAT: right
+}
+
+.ac_result_tip {
+	PADDING-RIGHT: 3px;
+	PADDING-LEFT: 3px;
+	PADDING-BOTTOM: 3px;
+	PADDING-TOP: 3px;
+	BORDER-BOTTOM: #666 1px dashed
+}
+
+#pop {
+	background: #fff;
+	width: 260px;
+	border: 1px solid #e0e0e0;
+	font-size: 12px;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+
+#popHead {
+	line-height: 32px;
+	background: #f6f0f3;
+	border-bottom: 1px solid #e0e0e0;
+	position: relative;
+	font-size: 12px;
+	padding: 0 0 0 10px;
+}
+
+#popHead h2 {
+	font-size: 14px;
+	color: #666;
+	line-height: 32px;
+	height: 32px;
+	text-align: left;
+}
+
+#popHead #popClose {
+	position: absolute;
+	right: 10px;
+	top: 1px;
+}
+
+#popHead a#popClose:hover {
+	color: #f00;
+	cursor: pointer;
+}
+
+#popContent {
+	padding: 5px 10px;
+}
+
+#popTitle {
+	text-align: left;
+}
+
+#popTitle a {
+	line-height: 24px;
+	font-size: 14px;
+	font-family: '微软雅黑';
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#popTitle a:hover {
+	color: #f60;
+}
+
+#popIntro {
+	line-height: 160%;
+	margin: 5px 0;
+	color: #666;
+	text-align: left;
+}
+
+#popIntro a {
+	line-height: 24px;
+	font-size: 13px;
+	font-family: '微软雅黑';
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#popIntro a:hover {
+	color: #f60;
+}
+
+#popMore {
+	text-align: right;
+	border-top: 1px dotted #ccc;
+	line-height: 24px;
+	margin: 8px 0 0 0;
+}
+
+#popMore a {
+	color: #f60;
+}
+
+#popMore a:hover {
+	color: #f00;
+}

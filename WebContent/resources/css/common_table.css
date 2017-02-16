@@ -1,0 +1,49 @@
+.stable th {
+	background-color: #f5fafe;
+	text-align: center;
+	font-weight: 500;
+}
+
+.stable {
+	width: 100%;
+	text-align: center;
+	background-color: #cad9ea;
+	font-size: 13px;
+}
+
+.stable tr {
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+.stable td {
+	background-color: #FFFFFF;
+	padding: 2px 2px 2px 2px;
+	text-align: center;
+}
+
+.stable1 th {
+	background-color: #f5fafe;
+	text-align: center;
+	font-weight: 500;
+}
+
+.stable1 {
+	width: 100%;
+	text-align: center;
+	background-color: #cad9ea;
+	font-size: 13px;
+}
+
+.stable1 tr {
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+.stable1 td {
+	background-color: #FFFFFF;
+	padding: 2px 2px 2px 2px;
+	text-align: left;
+}
