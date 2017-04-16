@@ -39,7 +39,7 @@ public class DataInfoDaoImpl extends BaseDaoImpl<DataInfo> implements DataInfoDa
 
 	@Override
 	public List<DataInfo> getDataSum(String month) {
-		String hql="FROM DataInfo where month=? and targets.id in ('52','54','91','117','57','59','60')";
+		String hql="FROM DataInfo where month=? and targets.id in ('16','117','52','53','54','60','61','62','63','66','69','70','71','72','73','77','80','14','85','92','93','86','87','88','89','90','91')";
 		Query query=getSession().createQuery(hql);
 		query.setString(0,month);
 		return query.list();

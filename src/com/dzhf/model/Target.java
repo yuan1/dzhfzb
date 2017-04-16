@@ -28,6 +28,7 @@ public class Target {
 	private String remark;
 	private String indexvalue;  //д╛хож╣
 	private int isgongshi;
+	private int summary;
 	private String sum;
 	private int sort;
 	private String parentid;
@@ -119,5 +120,11 @@ public class Target {
 	}
 	public int compareTo(Target a) {
 		return a.getId() - this.getId();
+	}
+	public int getSummary() {
+		return summary;
+	}
+	public void setSummary(int summary) {
+		this.summary = summary;
 	}
 }

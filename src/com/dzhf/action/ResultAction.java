@@ -498,25 +498,43 @@ public class ResultAction extends ActionSupport{
 		ActionContext.getContext().put("dataList",getDataMapbyDept(datalist));
 		List<Dept> d2=new ArrayList<Dept>();
 		List<Integer> l1=symServ.getAllDept();
-		String month1="[";
 		for(Integer d1:l1){
 			if(l1.contains(d1)&&d1!=101){
 				Dept d=symServ.getDeptMess(d1);
 				d2.add(d);
-				month1+="'"+d.getDept_name()+"',";
 			}
 		}
 		ActionContext.getContext().put("deptlist",d2);
 		List<Target> tar=new ArrayList<Target>();
-		tar.add(targetServ.getTarget("52"));
-		tar.add(targetServ.getTarget("54"));
-		tar.add(targetServ.getTarget("91"));
+		tar.add(targetServ.getTarget("16"));
 		tar.add(targetServ.getTarget("117"));
-		tar.add(targetServ.getTarget("57"));
-		tar.add(targetServ.getTarget("59"));
+		tar.add(targetServ.getTarget("52"));
+		tar.add(targetServ.getTarget("53"));
+		tar.add(targetServ.getTarget("54"));
 		tar.add(targetServ.getTarget("60"));
+		tar.add(targetServ.getTarget("61"));
+		tar.add(targetServ.getTarget("62"));
+		tar.add(targetServ.getTarget("63"));
+		tar.add(targetServ.getTarget("66"));
+		tar.add(targetServ.getTarget("69"));
+		tar.add(targetServ.getTarget("70"));
+		tar.add(targetServ.getTarget("71"));
+		tar.add(targetServ.getTarget("72"));
+		tar.add(targetServ.getTarget("73"));
+		tar.add(targetServ.getTarget("77"));
+		tar.add(targetServ.getTarget("80"));
+		tar.add(targetServ.getTarget("142"));
+		tar.add(targetServ.getTarget("85"));
+		tar.add(targetServ.getTarget("92"));
+		tar.add(targetServ.getTarget("93"));
+		tar.add(targetServ.getTarget("86"));
+		tar.add(targetServ.getTarget("87"));
+		tar.add(targetServ.getTarget("88"));
+		tar.add(targetServ.getTarget("89"));
+		tar.add(targetServ.getTarget("90"));
+		tar.add(targetServ.getTarget("91"));
 		ActionContext.getContext().put("tarlist",tar);
-		
+		ActionContext.getContext().put("tarsize",tar.size());
 		}catch(Exception e){
 			e.printStackTrace();
 		}
